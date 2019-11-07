@@ -21,3 +21,6 @@ followed by...
 node index.js
 
 Make sure you are running these in the right directory too!
+
+# Running apps locally is for losers, I want it now!
+Don't fret, the project is hosted for free forever on http://newleafradio.glitch.me/. You may need to wake it up, but once it's up it will be dedicated to giving you your jimmie jams :)
