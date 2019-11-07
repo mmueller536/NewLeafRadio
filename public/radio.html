@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes">
+        <script data-ad-client="ca-pub-2534364794258141" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="../css/styles.css">
+        <title>Animal Crossing Hourly Radio</title>
+        <link rel="icon" href="https://cdn.glitch.com/a032b7da-b36c-4292-9322-7d4c98be233b%2Ffavicon.ico?v=1570649407335" type="image/x-icon"/>
+    </head>
+    <body>
+        <div class="main container-fluid">
+            <div class="main row p-4 justify-content-center">
+                <div class="blog-body col-10 col-lg-8">
+                    <h1 class="w-100 titlecard">Animal Crossing Hourly Radio</h1>
+                    <div class="body container-fluid p-4">
+                        <div class="row">
+                            <div class="col-12 col-md-6">
+                                <h3>
+                                    Where's the music?
+                                </h3>
+                                <p>
+                                    We'd like to just automatically start playing your favorite idle music for you right away, but some browsers have taken
+                                    issue to the autoplay functionality as it can be very disruptive and annoying to someone browsing the web to stumble on
+                                    a suddenly very noisy site.
+                                </p>
+                                <p>
+                                    So if you come on in here and want to listen to some music, just click below and the radio will hum to life before your
+                                    very eyes! Should you want to take a quick break from the music (because your dog needs to go out, in-laws are calling,
+                                    or need a quick coffee break), just click below again and our radio will wait patiently for your return.
+                                </p>
+                                <button onclick="playRadio(); swapButtons()" id="start" type="button" class="btn btn-block btn-lg m-2" style="display: block">Crank those tunes</button>
+                                <button onclick="stopRadio(); swapButtons()" id="stop" type="button" class="btn btn-block btn-lg m-2" style="display: none">Coffee break time</button>
+
+                                <h4 class="mt-4 mb-1">Weather:</h4>
+                                <div id="weather-options" class="btn-group btn-group-toggle mb-2" data-toggle="buttons">
+                                    <label class="btn btn-secondary active">
+                                        <input onchange="weatherChanged(this)" type="radio" name="options" id="none" autocomplete="off" checked> None
+                                    </label>
+                                    <label class="btn btn-secondary">
+                                        <input onchange="weatherChanged(this)" type="radio" name="options" id="custom" autocomplete="off"> Custom
+                                    </label>
+                                    <label class="btn btn-secondary">
+                                        <input onchange="weatherChanged(this)" type="radio" name="options" id="dynamic" autocomplete="off"> Dynamic
+                                    </label>
+                                </div>
+
+                                <div id="custom-weather-sub" style="display: none">
+                                    <h5 class="mt-4 mb-1">Custom Weather:</h5>
+                                    <div class="btn-group btn-group-toggle mb-2" data-toggle="buttons">
+                                        <label class="btn btn-secondary active" id="Normal">
+                                            <input onchange="customWeatherRequest(this)" type="radio" name="options" id="Normal" autocomplete="off" checked> Clear Skies
+                                        </label>
+                                        <label class="btn btn-secondary" id="Rain">
+                                            <input onchange="customWeatherRequest(this)" type="radio" name="options" id="Rain" autocomplete="off"> Raining
+                                        </label>
+                                        <label class="btn btn-secondary" id="Snow">
+                                            <input onchange="customWeatherRequest(this)" type="radio" name="options" id="Snow" autocomplete="off"> Snowing
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="slidecontainer pb-3">
+                                    <h5 class="mt-4 mb-1">Volume</h5>
+                                    <input type="range" min="1" max="100" value="100" class="slider" id="myRange" onchange="slideVolume(this)">
+                                </div>
+                            </div>
+                            <div style="text-align: center" class="col-12 col-md-6">
+                                <img class="d-md-block d-none w-100" src="https://cdn.glitch.com/a032b7da-b36c-4292-9322-7d4c98be233b%2Fradio_image.png?v=1570638910106">
+                                <style>.bmc-button img{width: 27px !important;margin-bottom: 1px !important;box-shadow: none !important;border: none !important;vertical-align: middle !important;}.bmc-button{line-height: 36px !important;height:37px !important;text-decoration: none !important;display:inline-flex !important;color:#FFFFFF !important;background-color:#FF813F !important;border-radius: 3px !important;border: 1px solid transparent !important;padding: 1px 9px !important;font-size: 22px !important;letter-spacing:0.6px !important;box-shadow: 0px 1px 2px rgba(190, 190, 190, 0.5) !important;-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;margin: 0 auto !important;font-family:'Cookie', cursive !important;-webkit-box-sizing: border-box !important;box-sizing: border-box !important;-o-transition: 0.3s all linear !important;-webkit-transition: 0.3s all linear !important;-moz-transition: 0.3s all linear !important;-ms-transition: 0.3s all linear !important;transition: 0.3s all linear !important;}.bmc-button:hover, .bmc-button:active, .bmc-button:focus {-webkit-box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;text-decoration: none !important;box-shadow: 0px 1px 2px 2px rgba(190, 190, 190, 0.5) !important;opacity: 0.85 !important;color:#FFFFFF !important;}</style><link href="https://fonts.googleapis.com/css?family=Cookie" rel="stylesheet"><a class="bmc-button" target="_blank" href="https://www.buymeacoffee.com/newleafradio"><img src="https://bmc-cdn.nyc3.digitaloceanspaces.com/BMC-button-images/BMC-btn-logo.svg" alt="Buy me a coffee"><span style="margin-left:5px">Buy me a coffee</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Error Occured</h5>
+                        <button type="button" class="close" onclick="shrinkModal()" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col">
+                                    <p>
+                                        Looks like an error in using the weather api must have occured. We've gone 
+                                        ahead and set your weather to none for now. We suggest checking your local 
+                                        weather through a window and manually selecting it until we can resolve 
+                                        your issue in another update.
+                                    </p>
+                                </div>
+                                <div class="col">
+                                    <img src="https://cdn.glitch.com/a032b7da-b36c-4292-9322-7d4c98be233b%2Fapi_error.png?v=1570638909933">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="../js/radio.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "name": "animal-crossing",
+  "version": "1.0.0",
+  "description": "Relaxing Animal Crossing Music App",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm build ."
+  },
+  "keywords": [
+    "Animal",
+    "Crossing",
+    "Cute",
+    "Music",
+    "Relax",
+    "Relaxing",
+    "Nice",
+    "Wholesome"
+  ],
+  "author": "Michael Mueller",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

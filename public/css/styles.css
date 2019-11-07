@@ -1,0 +1,130 @@
+html, body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    height: 100%;
+    width: 100%;
+    background-image: url("https://cdn.glitch.com/a032b7da-b36c-4292-9322-7d4c98be233b%2Fbackground.jpg?v=1570638910323")
+}
+
+.blog-body {
+    padding: 0;
+    background-color: bisque;
+    color: darkslategray;
+    border-radius: 5px;
+}
+
+h1.titlecard {
+    padding: 10px;
+    font-weight: bold;
+    background-color: maroon;
+    color: burlywood;
+    text-align: center;
+    border-radius: 5px;
+}
+
+h3 {
+    font-weight: bold;
+}
+
+.body {
+    color: #3a3a3a;
+}
+
+button {
+    background-color: maroon!important;
+    color: burlywood!important;
+    font-weight: bold!important;
+}
+
+a {
+    color: maroon;
+}
+
+a:hover {
+    color: maroon;
+    text-decoration: none;
+}
+
+.btn-secondary {
+    background-color: maroon;
+    color: burlywood;
+    font-weight: bold;
+    border: none!important;
+}
+
+.btn-secondary.active {
+    border: none!important;
+    background-color: burlywood!important;
+    color: maroon!important;
+}
+
+.btn-secondary.focus {
+    border: none!important;
+    background-color: burlywood!important;
+    color: maroon!important;
+    box-shadow: none;
+}
+
+.btn-secondary:hover {
+    border: none!important;
+    background-color: burlywood!important;
+    color: maroon!important;
+}
+
+.error-popup {
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    right: 25%;
+    background-color: maroon;
+    color: burlywood;
+    border-radius: 5px;
+}
+
+.modal-header {
+    background-color: maroon;
+    color:burlywood;
+    border: none;
+}
+
+.modal-body {
+    background-color: burlywood;
+    border: none;
+}
+
+.slidecontainer {
+    width: 100%;
+  }
+  
+  .slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  
+  .slider:hover {
+    opacity: 1;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: maroon;
+    cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+  }
